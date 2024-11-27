@@ -2,11 +2,13 @@ import React from 'react';
 import PopularServices from './PopularServices';
 import Card from './Card';
 import About from './About';
+import Banner from '../Banner/Banner';
 
 const Homepage = () => {
     return (
         <main>
-            <h2>This is Home Page</h2>
+           
+            <Banner></Banner>
             <PopularServices></PopularServices>
             <Card></Card>
             <About></About>
