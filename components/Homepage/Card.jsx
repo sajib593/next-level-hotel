@@ -2,14 +2,14 @@ import React from 'react';
 
 const Card = () => {
     return (
-    <div>
+    <div className=' container mx-auto'>
         <h1 className="text-xl font-bold text-gray-800 uppercase dark:text-white">
         Hotel in Your area
       </h1><br />
-        <div className='flex gap-6'>
+        <div className='flex gap-6 '>
               
             <div className="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-  <div className="px-4 py-2">
+  <div className="px-4 py-2 ">
     {/* <h1 className="text-xl font-bold text-gray-800 uppercase dark:text-white">
       Hotel in Your area
     </h1> */}
