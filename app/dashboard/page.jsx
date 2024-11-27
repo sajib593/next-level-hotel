@@ -9,6 +9,8 @@ const page = () => {
             <h2 className="text-xl font-bold text-center mt-10">i make a checkout</h2>
 
             
+        
+            
         </div>
     );
 };
