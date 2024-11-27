@@ -1,6 +1,8 @@
 import React from 'react';
 import PopularServices from './PopularServices';
 import Countries from '../countries/Countries';
+import Card from './Card';
+import About from './About';
 
 const Homepage = () => {
     return (
@@ -9,6 +11,8 @@ const Homepage = () => {
             <PopularServices></PopularServices>
 
             <Countries></Countries>
+            <Card></Card><br /><br /><br />
+            <About></About>
         </main>
     );
 };
