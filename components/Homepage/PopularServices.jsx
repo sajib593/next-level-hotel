@@ -3,7 +3,7 @@ import React from 'react';
 
 const PopularServices = () => {
     return (
-        <div className='my-20 bg-[#ecf7ff] max-w-7xl mx-auto bg-'>
+        <div className='my-20 bg-[#ecf7ff]'>
             <div className='flex items-center'>
                 <Image className='w-1/2 object-cover transform transition-transform duration-500 hover:scale-110 hover:rotate-2' src={`https://i.imgur.com/mNQ9cOY.jpg`} alt='' width={600} height={400} />
                 <div className='w-1/2 mx-10 space-y-3 '>
