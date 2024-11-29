@@ -1,3 +1,4 @@
+
 "use client"
 import React, { useEffect, useState } from 'react';
 // import { hotels } from '../../lib/hotels'
@@ -35,6 +36,7 @@ const Card = () => {
       </div>
     </div>
   );
+
 };
 
 export default Card;
