@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 // import { hotels } from '../../lib/hotels'
 import Hotels from '../Cards/Hotels';
+import Link from 'next/link';
 
 const Card = () => {
 
@@ -17,7 +18,7 @@ const Card = () => {
     setHotels(data);
   };
 
-  console.log(hotels)
+  // console.log(hotels)
   return (
     <div>
       <h1 className="text-xl font-bold text-gray-800 uppercase dark:text-white">
@@ -26,7 +27,9 @@ const Card = () => {
       <div className='flex gap-6'>
         {
           hotels.map((hotel) => (
-            <Hotels key={hotel._id} hotel={hotel}></Hotels>
+            <Link key={hotel._id} href={`/hotels/${hotel._id}`}>
+              <Hotels hotel={hotel}></Hotels>
+            </Link>
           ))
         }
       </div>
