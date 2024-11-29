@@ -21,9 +21,9 @@ const Card = () => {
   console.log(hotels)
   return (
     <div>
-      <h1 className="text-xl font-bold text-gray-800 uppercase dark:text-white">
+      <h1 className="text-3xl font-bold text-gray-800 uppercase dark:text-white text-center mt-20">
         Hotel in Your area
-      </h1><br />
+      </h1><br /> <br />
       <div className='flex gap-6'>
         {
           hotels.map((hotel) => (
