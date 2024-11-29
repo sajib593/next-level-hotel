@@ -4,6 +4,7 @@ import Card from './Card';
 import About from './About';
 
 import Countries from '../countries/Countries';
+import Card1 from './Card1/page';
 
 
 
@@ -15,7 +16,11 @@ const Homepage = () => {
             <PopularServices></PopularServices>
 
             <Countries></Countries>
-            <Card></Card><br /><br /><br />
+            {/* <Card></Card><br /> */}
+
+            <Card1></Card1>
+            
+            <br /><br />
 
             <About></About>
         </main>

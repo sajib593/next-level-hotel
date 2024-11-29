@@ -15,7 +15,7 @@ const Banner = () => {
             className="w-full h-screen object-cover"  // Full screen
             style={{ pointerEvents: "none" }}  // Prevent interaction
           ></iframe>
-          <img className="absolute left-[38%] top-[78%] left-[46%] w-40" src="https://i.ibb.co/T2ZmBr6/lv-removebg-preview.png" alt="" />
+          
         </div>
       </div>
     </div>
