@@ -4,7 +4,8 @@ import Card from './Card';
 import About from './About';
 
 import Countries from '../countries/Countries';
-import Card1 from './Card1/page';
+
+import Banner from '../Banner/Banner';
 
 
 
@@ -12,13 +13,14 @@ const Homepage = () => {
     return (
         <main>
            
+           <Banner></Banner>
           
             <PopularServices></PopularServices>
 
             <Countries></Countries>
-            {/* <Card></Card><br /> */}
+            <Card></Card><br />
 
-            <Card1></Card1>
+            
             
             <br /><br />
 
