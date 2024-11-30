@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Shared/Footer";
 
 import AuthProvider from "@/services/AuthProvider";
+import Navbar from "@/components/Navbar/Navbar";
 
 
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
 
         <AuthProvider>
           {/* navbar */}
+          <Navbar></Navbar>
           <section className="max-w-7xl mx-auto">
             {children}
           </section>

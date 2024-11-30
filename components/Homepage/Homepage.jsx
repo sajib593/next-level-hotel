@@ -15,10 +15,11 @@ const Homepage = () => {
            
            <Banner></Banner>
           
+            <Card></Card>
             <PopularServices></PopularServices>
 
+            <br /> <br /> <br />
             <Countries></Countries>
-            <Card></Card><br />
 
             
             

@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="relative">
+    <div className="relative my-10">
       {/* Carousel */}
       <div className="carousel w-full ">
         {/* Carousel Item 1 */}
