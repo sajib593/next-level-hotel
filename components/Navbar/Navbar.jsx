@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
@@ -20,7 +22,11 @@ const Navbar = () => {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><a>Gym</a></li>
+              {/* <Link href="/gym">
+          Gym
+        </Link> */}
+        <li><Link href="/gym"> <a >Gym</a></Link></li>
+        
             <li>
               <a>Management</a>
               <ul className="p-2">
@@ -45,11 +51,11 @@ const Navbar = () => {
               </ul>
             </details>
           </li>
-          <li><a>Gym</a></li>
+          <li><Link href="/gym"> <a >Gym</a></Link></li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Login</a>
+       <Link href="/gym"> <a className="btn">Login</a></Link>
       </div>
     </div>
   )
