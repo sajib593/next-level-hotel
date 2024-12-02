@@ -1,3 +1,4 @@
+
 "use client";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
@@ -55,6 +56,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+
           <Link href="/" className="text-xl">
             <img
               className="w-14"
@@ -84,11 +86,22 @@ const Navbar = () => {
                 </ul>
               </details>
             </li>
+
+//           <ul
+//             tabIndex={0}
+//             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+//               {/* <Link href="/gym">
+//           Gym
+//         </Link> */}
+//         <li><Link href="/gym"> <a >Gym</a></Link></li>
+        
+
             <li>
               <a>Gym</a>
             </li>
           </ul>
         </div>
+
 
         <div className="navbar-end space-x-2">
           {!session ? (
@@ -125,6 +138,27 @@ const Navbar = () => {
             </div>
           )}
         </div>
+
+//         <a className="btn btn-ghost text-xl"><img className="w-14" src="https://i.ibb.co/T2ZmBr6/lv-removebg-preview.png" alt="" /></a>
+//       </div>
+//       <div className="navbar-center hidden lg:flex">
+//         <ul className="menu menu-horizontal px-1">
+//           <li><a>Swimming Pool</a></li>
+//           <li>
+//             <details>
+//               <summary>Management</summary>
+//               <ul className="p-2">
+//                 <li><a>Footage</a></li>
+//                 <li><a>Control room</a></li>
+//               </ul>
+//             </details>
+//           </li>
+//           <li><Link href="/gym"> <a >Gym</a></Link></li>
+//         </ul>
+//       </div>
+//       <div className="navbar-end">
+//        <Link href="/gym"> <a className="btn">Login</a></Link>
+
       </div>
     </div>
   );
