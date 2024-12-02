@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           {/* navbar */}
           <Navbar></Navbar>
-          <section className="max-w-7xl mx-auto">
+          <section className="container mx-auto">
             {children}
           </section>
 
