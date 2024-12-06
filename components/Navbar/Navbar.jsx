@@ -1,3 +1,7 @@
+'use client'
+
+import Link from 'next/link';
+
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
@@ -35,7 +39,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><a>Swimming Pool</a></li>
+          <li><Link href='/pool'>Swimming Pool</Link></li>
           <li>
             <details>
               <summary>Management</summary>
