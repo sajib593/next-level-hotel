@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Countries from "@/components/countries/Countries";
 import Homepage from "@/components/Homepage/Homepage";
@@ -21,5 +22,15 @@ export default function Home() {
 
      
     </div>
+=======
+import Homepage from "@/components/Homepage/Homepage";
+
+export default function Home() {
+  return (
+    <div className="">
+      <Homepage></Homepage>
+    </div>
+
+>>>>>>> 62d95912185f85f7b39d6159042f107826bc0b9b
   );
 }
