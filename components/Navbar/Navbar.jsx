@@ -2,6 +2,12 @@
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link"; // Import Link for routing
+import cc from "../../images/cc.jpg"; // Import an image for the navbar
 
 const Navbar = () => {
   const { data: session, status } = useSession(); // Destructure session and status
