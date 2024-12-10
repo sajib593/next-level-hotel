@@ -42,7 +42,7 @@ const gymformpage = () => {
           <input type="password" placeholder="password" className="input input-bordered" required />
           <label className="label">
          
-          <a href="#" className="label-text-alt link link-hover"><Link href="/gym">Back to Enroll Page?</Link></a>
+          {/* <a href="#" className="label-text-alt link link-hover"><Link href="/gym">Back to Enroll Page?</Link></a> */}
           
           </label>
         </div>

@@ -53,9 +53,9 @@ const Gympage = () => {
         <p className="font-medium text-gray-500 dark:text-gray-300">
         {gymplan.duration}
         </p>
-        <Link href="/gymform">  <button className="w-full px-4 py-2 mt-10 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+        <Link href={`/gym/${gymplan._id}`} className="w-full px-4 py-2 mt-10 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
           Enroll Now
-        </button>
+        
         </Link>
       </div>
       
