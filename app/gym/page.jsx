@@ -1,13 +1,27 @@
+"use client"
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Gympage = () => {
+  const [gymPlans, setGymPlans] = useState([]);
+
+  useEffect(() => {
+    fetchGymPlan();
+  }, []);
+
+  const fetchGymPlan = async () => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/gym`);
+    const data = await res.json();
+    setGymPlans(data);
+    console.log(data);
+  };
+
     return (
 
         <div > 
    
 <section>
-  <div>
+  <div className='mt-10 mb-10'>
   <div className="bg-white dark:bg-gray-900">
   <div className="container px-6 py-8 mx-auto">
     <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
@@ -22,63 +36,38 @@ const Gympage = () => {
      Try our **Pay-as-You-Go** option for maximum flexibility!
     </p>
     <div className="grid grid-cols-1 gap-8 mt-6 xl:mt-12 xl:gap-12 md:grid-cols-2 lg:grid-cols-3">
-    <div className="w-full p-8 space-y-8 text-center border border-gray-200 rounded-lg dark:border-gray-700">
+    {
+      gymPlans.map((gymplan) =>
+        <div key={gymplan._id} className="w-full p-8 space-y-8 text-center border border-gray-200 rounded-lg dark:border-gray-700">
       <img
-      src="https://i.postimg.cc/9FDRd5ng/download.jpg"
+      src={gymplan.imageUrl}
       alt="car!" 
       width={400}
                 height={200}/>
         <p className="font-medium text-gray-500 uppercase dark:text-gray-300">
-        Basic Plan
+        {gymplan.planName}
         </p>
         <h2 className="text-4xl font-semibold text-gray-800 uppercase dark:text-gray-100">
-          $0
+         {gymplan.price}
         </h2>
         <p className="font-medium text-gray-500 dark:text-gray-300">
-         Per Week
+        {gymplan.duration}
         </p>
-        <Link href="/gymform">  <button className="w-full px-4 py-2 mt-10 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+        <Link href={`/gym/${gymplan._id}`} className="w-full px-4 py-2 mt-10 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
           Enroll Now
-        </button>
+        
         </Link>
       </div>
-      {/* <div className="w-full p-8 space-y-8 text-center bg-blue-600 rounded-lg"> */}
-      <div className="w-full p-8 space-y-8 text-center border border-gray-200 rounded-lg dark:border-gray-700">
-      <img
-      src="https://i.postimg.cc/WpdYyTxH/gym.jpg"
-      alt="car!"
-      width={400}
-                height={200} />
-        <p className="font-medium text-gray-200 uppercase">Standard Plan</p>
-        <h2 className="text-5xl font-bold text-white uppercase dark:text-gray-100">
-          $40
-        </h2>
-        <p className="font-medium text-gray-200">Per month</p>
-        <Link href="/gymform">  <button className="w-full px-4 py-2 mt-10 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-          Enroll Now
-        </button>
-        </Link>
-      </div>
-      <div className="w-full p-8 space-y-8 text-center border border-gray-200 rounded-lg dark:border-gray-700">
-      <img
-      src="https://i.postimg.cc/9FDRd5ng/download.jpg"
-      alt="car!" 
-      width={400}
-                height={200}/>
-        <p className="font-medium text-gray-500 uppercase dark:text-gray-300">
-        Premium Plan
-        </p>
-        <h2 className="text-4xl font-semibold text-gray-800 uppercase dark:text-gray-100">
-          $100
-        </h2>
-        <p className="font-medium text-gray-500 dark:text-gray-300">
-          Life time
-        </p>
-        <Link href="/gymform">  <button className="w-full px-4 py-2 mt-10 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-          Enroll Now
-        </button>
-        </Link>
-      </div>
+      
+      
+      )
+    
+
+    }
+
+
+
+  
     </div>
   </div>
 </div>
