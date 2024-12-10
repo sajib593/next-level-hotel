@@ -1,6 +1,10 @@
 "use client";
 import { signOut, useSession } from "next-auth/react";
+<<<<<<< HEAD
 // import Image from "next/image";
+=======
+import Image from "next/image";
+>>>>>>> 02152f315f5285f24f573de15862a8043be3f013
 import Link from "next/link";
 
 const Navbar = () => {
