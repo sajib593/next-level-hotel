@@ -46,6 +46,7 @@ const Navbar = () => {
               <ul className="p-2">
                 <li><a>Footage</a></li>
                 <li><a>Control room</a></li>
+                <li><Link href='/pool-users'>Pool Users</Link></li>
               </ul>
             </details>
           </li>
