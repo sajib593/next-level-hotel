@@ -1,9 +1,10 @@
 import React from 'react';
 import PopularServices from './PopularServices';
+import Countries from '../countries/Countries';
 import Card from './Card';
 import About from './About';
 
-import Countries from '../countries/Countries';
+// import Countries from '../countries/Countries';
 
 import Banner from '../Banner/Banner';
 
@@ -26,6 +27,8 @@ const Homepage = () => {
             <br /><br />
 
             <About></About>
+           
+           
         </main>
     );
 };
